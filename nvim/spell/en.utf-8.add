@@ -1,0 +1,11 @@
+NATS
+localhost
+GitlabCI
+config
+nats
+env
+libnats
+Jetstream
+VC
+vc
+kv
