@@ -4,30 +4,42 @@ source ~/.config/nvim/default.vim
 " Lua
 exec 'luafile' '~/.config/nvim/config.lua'
 
+" Barbar bindings
+" Move to previous/next
+nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
+
+" Re-order to previous/next
+nnoremap <silent>    <A-<> <Cmd>BufferMovePrevious<CR>
+nnoremap <silent>    <A->> <Cmd>BufferMoveNext<CR>
+
+" Goto buffer in position...
+nnoremap <silent>    <A-1> <Cmd>BufferGoto 1<CR>
+nnoremap <silent>    <A-2> <Cmd>BufferGoto 2<CR>
+nnoremap <silent>    <A-3> <Cmd>BufferGoto 3<CR>
+nnoremap <silent>    <A-4> <Cmd>BufferGoto 4<CR>
+nnoremap <silent>    <A-5> <Cmd>BufferGoto 5<CR>
+nnoremap <silent>    <A-6> <Cmd>BufferGoto 6<CR>
+nnoremap <silent>    <A-7> <Cmd>BufferGoto 7<CR>
+nnoremap <silent>    <A-8> <Cmd>BufferGoto 8<CR>
+nnoremap <silent>    <A-9> <Cmd>BufferGoto 9<CR>
+nnoremap <silent>    <A-0> <Cmd>BufferLast<CR>
+
+" Pin/unpin buffer
+nnoremap <silent>    <A-p> <Cmd>BufferPin<CR>
+
+" Close buffer
+nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
+" Restore buffer
+nnoremap <silent>    <A-s-c> <Cmd>BufferRestore<CR>
+
+" Neo-tree
+nnoremap <silent> <leader>r <Cmd>Neotree reveal<CR>
+nnoremap <silent> <leader>n <Cmd>Neotree toggle<CR>
+
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep hidden=true<cr> 
-
-" nerdtree
-let g:nerdtree_tabs_open_on_console_startup = 2
-let g:nerdtree_tabs_autofind = 1
-let g:nerdtree_tabs_smart_startup_focus = 1
-let g:nerdtree_tabs_synchronize_view = 1
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeShowHidden=1
-nnoremap <leader>n <plug>NERDTreeTabsToggle<cr>
-nnoremap <leader>r <plug>NERDTreeTabsFind<cr>
-
-" wintabs
-map <C-H> <Plug>(wintabs_previous)
-map <C-L> <Plug>(wintabs_next)
-map <C-T>c <Plug>(wintabs_close)
-map <C-T>u <Plug>(wintabs_undo)
-map <C-T>o <Plug>(wintabs_only)
-nnoremap Q <Plug>(wintabs_close)
-nnoremap <C-W>c <Plug>(wintabs_close_window)
 
 " Fugitive
 nnoremap <space>gs :Git<cr>
