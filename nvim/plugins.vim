@@ -18,6 +18,9 @@ Plug 'nvim-treesitter/nvim-treesitter'
 " Vim Unimpaired
 Plug 'tpope/vim-unimpaired'
 
+" Surround selection with tags
+Plug 'tpope/vim-surround'
+
 " git indicator in editor
 Plug 'airblade/vim-gitgutter'
 
@@ -54,6 +57,9 @@ Plug 'L3MON4D3/LuaSnip'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'LunarWatcher/auto-pairs'
+
+" Scrach pad
+Plug 'mtth/scratch.vim'
 
 " UUID
 Plug 'kburdett/vim-nuuid'

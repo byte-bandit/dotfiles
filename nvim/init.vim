@@ -67,6 +67,9 @@ au FileType go noremap <F7> :GoTestFunc<CR>
 au FileType go noremap <F5> :GoTest<CR>
 au FileType go noremap fs :GoFillStruct<CR>
 
+" scratch
+let g:scratch_persistence_file = ".scratch/pad.MD"
+
 "au FileType go noremap <Leader>F12 :GoDef<CR>
 "au FileType go nmap <Leader>gd <Plug>(go-def-tab)
 
