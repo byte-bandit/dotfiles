@@ -40,17 +40,7 @@ nnoremap <silent> <leader>n <Cmd>Neotree toggle<CR>
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep hidden=true<cr> 
-
-" Fugitive
-nnoremap <space>gs :Git<cr>
-nnoremap <space>gb :Gblame<cr>
-nnoremap <space>gc :Gcommit -v<cr>
-nnoremap <space>ga :Git add -p<cr>
-nnoremap <space>gm :Gcommit --amend<cr>
-nnoremap <space>gp :Gpush<cr>
-nnoremap <space>gd :Gdiff<cr>
-nnoremap <space>gw :Gwrite<cr>
-
+nnoremap <leader>fr <cmd>Telescope resume<cr> 
 
 " go
 let g:go_highlight_types = 1
@@ -66,6 +56,15 @@ let g:go_build_tags = "integration"
 au FileType go noremap <F7> :GoTestFunc<CR>
 au FileType go noremap <F5> :GoTest<CR>
 au FileType go noremap fs :GoFillStruct<CR>
+let g:go_debug_windows = {
+      \ 'vars':       'rightbelow 60vnew',
+      \ 'stack':      'rightbelow 10new',
+\ }
+
+" remap GH Copilot auto accept to other key
+imap <silent><script><expr> <A-Space> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 
 " scratch
 let g:scratch_persistence_file = ".scratch/pad.MD"

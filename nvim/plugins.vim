@@ -2,6 +2,7 @@ call plug#begin()
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
+Plug 'tommcdo/vim-fugitive-blame-ext' "Commit lines for git blame
 
 " Neo Tree
 Plug 'MunifTanjim/nui.nvim'
@@ -49,6 +50,10 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 
+" Pretty message output
+Plug 'rcarriga/nvim-notify'
+Plug 'm4xshen/hardtime.nvim'
+
 
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -58,11 +63,17 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'LunarWatcher/auto-pairs'
 
+" GH Copilot
+Plug 'github/copilot.vim'
+
 " Scrach pad
 Plug 'mtth/scratch.vim'
 
 " UUID
 Plug 'kburdett/vim-nuuid'
+
+" Bookmark system
+Plug 'MattesGroeger/vim-bookmarks'
 
 " Typescript support
 Plug 'leafgarland/typescript-vim'

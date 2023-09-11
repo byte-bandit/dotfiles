@@ -20,7 +20,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set colorcolumn=120
-set tw=79
+"set tw=79
 set autoindent
 set smartindent
 
@@ -34,6 +34,10 @@ colorscheme catppuccin-frappe " catppuccin-latte, catppuccin-frappe, catppuccin-
 let g:lightline = {'colorscheme': 'catppuccin'}
 filetype on
 filetype plugin indent on
+
+
+" Highlight current line
+set cursorline
 
 " spell check
 " This sort of mucks up writing code though

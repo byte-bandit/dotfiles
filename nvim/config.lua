@@ -111,9 +111,12 @@ cmp.setup {
     },
 }
 
-local saga = require('lspsaga').setup({})
+require("lspsaga").setup {
+    ui = {
+        kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+    },
+}
 local keymap = vim.keymap.set
---saga.init_lsp_saga() No longer needed
 
 -- Lsp finder find the symbol definition implement reference
 -- if there is no implement it will hide
@@ -131,7 +134,8 @@ keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
 -- you can edit the definition file in this flaotwindow
 -- also support open/vsplit/etc operation check definition_action_keys
 -- support tagstack C-t jump back
-keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+keymap("n", "gpd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", { silent = true })
 
 -- Show line diagnostics
 keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
@@ -293,6 +297,7 @@ require("catppuccin").setup({
         illuminate = true,
         neotree = true,
         barbar = true,
+        lsp_saga = true,
     }
 })
 
@@ -341,3 +346,6 @@ require('illuminate').configure({
     -- min_count_to_highlight: minimum number of matches required to perform highlighting
     min_count_to_highlight = 1,
 })
+
+require("hardtime").setup()
+vim.notify = require("notify")
