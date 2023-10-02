@@ -3,9 +3,13 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     event = { "BufReadPost", "BufNewFile" },
+    main = "ibl",
+    config = function()
+      require("ibl").setup({
+        indent = { char = "▎", tab_char = ">" },
+      })
+    end,
     opts = {
-      -- char = "▏",
-      char = "│",
       filetype_exclude = {
         "help",
         "alpha",
@@ -18,8 +22,6 @@ return {
         "toggleterm",
         "lazyterm",
       },
-      show_trailing_blankline_indent = false,
-      show_current_context = false,
     },
   },
 }
