@@ -1,0 +1,37 @@
+# startup.conf
+new_tab 📓 Notes
+cd ~/.notes
+title Kitty - Notes
+#launch zsh -c 'nvim .'
+launch zsh
+layout tall
+
+new_tab  SSH
+cd ~
+title Kitty - SSH
+launch zsh
+launch zsh
+launch zsh
+layout vertical
+
+new_tab 🚧 Ansible
+cd ~/src/github.com/VolumeFi/paloma-private-testnet
+title Kitty - Ansible
+#launch zsh -c 'nvim .'
+launch zsh
+layout tall
+
+new_tab 󱗆 Pigeon
+cd ~/src/github.com/VolumeFi/pigeon
+title Kitty - Pigeon
+#launch zsh -c 'nvim .'
+launch zsh
+layout tall
+
+new_tab 🦄 Paloma
+cd ~/src/github.com/VolumeFi/paloma
+title Kitty - Paloma
+#launch zsh -c 'nvim .'
+#enabled_layouts tall:bias=50;full_size=1
+launch zsh
+layout tall
