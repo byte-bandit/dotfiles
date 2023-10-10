@@ -14,4 +14,6 @@ require("lazy").setup({
   { import = "plugins.ui" },
   { import = "plugins.dap" },
   { import = "plugins.lang" },
+  -- Load last
+  { import = "plugins.coding.copilot" },
 })

@@ -6,7 +6,7 @@ return {
     main = "ibl",
     config = function()
       require("ibl").setup({
-        indent = { char = "▎", tab_char = ">" },
+        indent = { char = "▎", tab_char = "▎" },
       })
     end,
     opts = {
